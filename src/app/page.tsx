@@ -23,29 +23,20 @@ export default function Home() {
 
   const hero1 = data?.results.slice(0, 7) ?? [];
 
-  {
-    /*  ======================= categories ======================= */
-  }
+
 
   const { data: sportsData } = useGetNewsCategory("sports");
   const { data: techData } = useGetNewsCategory("technology");
   const { data: politicsData } = useGetNewsCategory("politics");
   const { data: worldData } = useGetNewsCategory("world");
-
+  const { data: foodData } = useGetNewsCategory("food");
+  const { data: businessData } = useGetNewsCategory("business");
+  const { data: environmentData } = useGetNewsCategory("environment");
   const { data: scienceData } = useGetNewsCategory("science");
   const { data: tourismData } = useGetNewsCategory("tourism");
   const { data: entertainmentData } = useGetNewsCategory("entertainment");
   const { data: healthData } = useGetNewsCategory("health");
-
   const { data: topData } = useGetNewsCategory("top");
-
-  const { data: foodData } = useGetNewsCategory("food");
-  const { data: businessData } = useGetNewsCategory("business");
-  const { data: environmentData } = useGetNewsCategory("environment");
-
-  {
-    /*  ======================= categories ======================= */
-  }
 
   return (
     <PublicLayout>
@@ -222,7 +213,6 @@ export default function Home() {
               />
             ))}
           </div>
-
         </div>
       </LatestNewsSection>
     </PublicLayout>
