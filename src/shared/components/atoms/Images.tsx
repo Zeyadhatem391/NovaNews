@@ -14,21 +14,16 @@ export default function Images({
   src,
   alt,
   className,
-  width = 200,
-  height = 200,
   priority = false,
 }: Props) {
-  const baseClasses = "w-full flex justify-center items-center";
-
   return (
-    <div className={cn(baseClasses)}>
+    <div className="relative w-full h-full">
       <Image
         src={src}
         alt={alt}
-        width={width}
-        height={height}
+        fill
+         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         priority={priority}
-        quality={100}
         className={cn(className)}
       />
     </div>
